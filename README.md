@@ -1,16 +1,32 @@
-apparmor
-========
-
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-apparmor.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-apparmor)
+## apparmor [![Build Status](https://travis-ci.org/Oefenweb/ansible-apparmor.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-apparmor)
 
 Remove apparmor in Debian-like systems.
 
-License
--------
+#### Requirements
+
+None
+
+#### Variables
+
+None
+
+## Dependencies
+
+None
+
+#### Example
+
+```yaml
+---
+- hosts: all
+  roles:
+  - apparmor
+```
+
+#### License
 
 MIT
 
-Author Information
-------------------
+#### Feedback, bug-reports, requests, ...
 
-Mischa ter Smitten (<mtersmitten@oefenweb.nl>)
+Are [welcome](https://github.com/Oefenweb/ansible-apparmor/issues)!
