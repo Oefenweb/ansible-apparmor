@@ -5,11 +5,12 @@
   register: apparmor_service
 
 - name: stop service
-  command: /etc/init.d/apparmor stop
+  service: name=apparmor state=stopped
   when: apparmor_service.stat.exists
 
 - name: remove service
-  command: update-rc.d -f apparmor remove
+  service: name=apparmor enabled=no
+  when: apparmor_service.stat.exists
 
 - name: remove package
   apt: name=apparmor state=absent purge=yes
