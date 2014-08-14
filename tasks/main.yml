@@ -1,15 +1,15 @@
 ---
 # tasks file for apparmor
-- name: apparmor | check service existence
+- name: check service existence
   stat: path=/etc/init.d/apparmor get_md5=no
   register: apparmor_service
 
-- name: apparmor | stop service
+- name: stop service
   command: /etc/init.d/apparmor stop
   when: apparmor_service.stat.exists
 
-- name: apparmor | remove service
+- name: remove service
   command: update-rc.d -f apparmor remove
 
-- name: apparmor | remove package
+- name: remove package
   apt: name=apparmor state=absent purge=yes
