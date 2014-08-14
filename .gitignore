@@ -1,0 +1,26 @@
+
+<!-- saved from url=(0104)https://bitbucket.org/Oefenweb/ansible-playbooks/raw/4064f76b4a4da50aaf05083123189b6c37610d7a/.gitignore -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css"></style></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;"># OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# IDE files #
+#################
+/.settings
+/.buildpath
+/.project
+/nbproject
+*.komodoproject
+*.kpf
+/.idea
+
+# Other files #
+###############
+!empty</pre></body></html>
