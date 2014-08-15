@@ -27,6 +27,10 @@ None
 
 MIT
 
+#### Author Information
+
+Mischa ter Smitten
+
 #### Feedback, bug-reports, requests, ...
 
 Are [welcome](https://github.com/Oefenweb/ansible-apparmor/issues)!
