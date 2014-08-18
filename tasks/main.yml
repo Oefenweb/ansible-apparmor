@@ -1,20 +1,29 @@
 ---
 # tasks file for apparmor
 - name: check service existence
-  stat: path=/etc/init.d/apparmor get_md5=no
+  stat:
+    path: /etc/init.d/apparmor
+    get_md5: no
   register: apparmor_service
   tags: [configuration, apparmor]
 
 - name: stop service
-  service: name=apparmor state=stopped
+  service:
+    name: apparmor
+    state: stopped
   when: apparmor_service.stat.exists
   tags: [configuration, apparmor]
 
 - name: remove service
-  service: name=apparmor enabled=no
+  service:
+    name: apparmor
+    enabled: no
   when: apparmor_service.stat.exists
   tags: [configuration, apparmor]
 
 - name: remove package
-  apt: name=apparmor state=absent purge=yes
+  apt:
+    name: apparmor
+    state: absent
+    purge: yes
   tags: [configuration, apparmor]
