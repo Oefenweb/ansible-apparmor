@@ -3,7 +3,6 @@
 - name: check service existence
   stat:
     path: /etc/init.d/apparmor
-    get_md5: no
   register: apparmor_service
   tags: [configuration, apparmor]
 
