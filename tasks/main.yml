@@ -16,7 +16,7 @@
 - name: remove service
   service:
     name: apparmor
-    enabled: no
+    enabled: false
   when: apparmor_service.stat.exists
   tags: [configuration, apparmor]
 
@@ -24,5 +24,5 @@
   apt:
     name: apparmor
     state: absent
-    purge: yes
+    purge: true
   tags: [configuration, apparmor]
