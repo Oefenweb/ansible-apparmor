@@ -3,7 +3,7 @@
 - name: check service existence
   stat:
     path: /etc/init.d/apparmor
-  register: apparmor_service
+  register: _apparmor_service
   tags:
     - configuration
     - apparmor
@@ -12,7 +12,7 @@
   service:
     name: apparmor
     state: stopped
-  when: apparmor_service.stat.exists
+  when: _apparmor_service.stat.exists
   tags:
    - configuration
    - apparmor
@@ -21,7 +21,7 @@
   service:
     name: apparmor
     enabled: false
-  when: apparmor_service.stat.exists
+  when: _apparmor_service.stat.exists
   tags:
    - configuration
    - apparmor
