@@ -1,18 +1,10 @@
 # tasks file for apparmor
 ---
-- name: check service existence
-  stat:
-    path: /etc/init.d/apparmor
-  register: _apparmor_service
-  tags:
-    - configuration
-    - apparmor
-
 - name: stop service
   service:
     name: apparmor
     state: stopped
-  when: _apparmor_service.stat.exists
+  failed_when: false
   tags:
    - configuration
    - apparmor
@@ -21,7 +13,7 @@
   service:
     name: apparmor
     enabled: false
-  when: _apparmor_service.stat.exists
+  failed_when: false
   tags:
    - configuration
    - apparmor
