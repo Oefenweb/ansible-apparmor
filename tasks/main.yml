@@ -1,4 +1,4 @@
-# tasks file for apparmor
+# tasks file
 ---
 - name: stop service
   service:
