@@ -1,6 +1,6 @@
 ## apparmor
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-apparmor.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-apparmor)
+[![CI](https://github.com/Oefenweb/ansible-apparmor/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-apparmor/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-apparmor-blue.svg)](https://galaxy.ansible.com/Oefenweb/apparmor)
 
 Remove apparmor in Debian-like systems.

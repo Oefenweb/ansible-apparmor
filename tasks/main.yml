@@ -6,8 +6,8 @@
     state: stopped
   failed_when: false
   tags:
-   - configuration
-   - apparmor
+    - configuration
+    - apparmor
 
 - name: remove service
   service:
@@ -15,8 +15,8 @@
     enabled: false
   failed_when: false
   tags:
-   - configuration
-   - apparmor
+    - configuration
+    - apparmor
 
 - name: remove package
   apt:
