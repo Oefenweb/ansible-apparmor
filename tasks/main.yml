@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: stop service
-  service:
+  ansible.builtin.service:
     name: apparmor
     state: stopped
   failed_when: false
@@ -10,7 +10,7 @@
     - apparmor
 
 - name: remove service
-  service:
+  ansible.builtin.service:
     name: apparmor
     enabled: false
   failed_when: false
@@ -19,7 +19,7 @@
     - apparmor
 
 - name: remove package
-  apt:
+  ansible.builtin.apt:
     name: apparmor
     state: absent
     purge: true
