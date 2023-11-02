@@ -23,7 +23,7 @@ None
 ---
 - hosts: all
   roles:
-    - apparmor
+    - oefenweb.apparmor
 ```
 
 #### License
